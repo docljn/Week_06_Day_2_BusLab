@@ -19,7 +19,19 @@ public class Bus {
     }
 
 
+    public int getCapacity() {
+        return this.capacity;
+    }
+
+    public int emptySeatCount() {
+        return this.capacity - this.passengers.size();
+
+    }
+
     public void board(Person person) {
-        this.passengers.add(person);
+        if (this.emptySeatCount() > 0) {
+            this.passengers.add(person);
+        }
+
     }
 }

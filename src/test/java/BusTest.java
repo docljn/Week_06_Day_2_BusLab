@@ -26,6 +26,22 @@ public class BusTest {
         assertEquals(1, bus.passengerCount());
     }
 
-    @
+    @Test
+    public void getBusCapacity(){
+        assertEquals(1, bus.getCapacity());
+    }
+
+    @Test
+    public void cantTakePassengerIfBusFull(){
+        bus.board(person);
+        bus.board(person);
+        assertEquals(1, bus.passengerCount());
+    }
+
+    @Test
+    public void numberOfEmptySeats(){
+        bus.board(person);
+        assertEquals(0, bus.emptySeatCount());
+    }
 
 }
