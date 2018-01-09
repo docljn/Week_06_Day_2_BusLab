@@ -12,4 +12,9 @@ public class BusStopTest {
         busStop = new BusStop("Jenners");
     }
 
+    @Test
+    public void queueStartsEmpty(){
+        assertEquals(0, busStop.queueCount());
+    }
+
 }

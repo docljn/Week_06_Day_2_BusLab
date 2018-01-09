@@ -11,4 +11,7 @@ public class BusStop {
     }
 
 
+    public int queueCount() {
+        return this.queue.size();
+    }
 }
